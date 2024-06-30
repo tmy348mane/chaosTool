@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Input Example</title>
+    <style>
+        /* Add some basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Set the height of the container */
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .input-group {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Radio Input Example</h1>
+        <div class="input-group">
+            <label>
+                <input type="radio" name="option" value="option1" onclick="showFields()"> Option 1
+            </label>
+        </div>
+        <div class="input-group">
+            <label>
+                <input type="radio" name="option" value="option2" onclick="showFields()"> Option 2
+            </label>
+        </div>
+        <div class="input-group">
+            <label>
+                <input type="radio" name="option" value="option3" onclick="showFields()"> Option 3
+            </label>
+        </div>
+        <div id="additionalFields" style="display: none;">
+            <input type="text" placeholder="Field 1">
+            <input type="text" placeholder="Field 2">
+            <input type="text" placeholder="Field 3">
+        </div>
+    </div>
+
+    <script>
+        function showFields() {
+            const additionalFields = document.getElementById("additionalFields");
+            additionalFields.style.display = "block"; // Show the additional fields
+        }
+    </script>
+</body>
+</html>
